@@ -8,7 +8,9 @@ from . import views
 # $ - "마지막"! 입니다. 그 뒤로 더이상 문자가 오면 안됩니다.#
 
 urlpatterns= [
-
+	
 	url(r'^$', views.post_list, name='post_list'),
 	url(r'^post/(?P<pk>[0-9]+)/$', views.post_detail, name='post_detail'),
+	url(r'^post/new/$', views.post_new, name='post_new'),
+	url(r'^post/edit/(?P<pk>\d+)$',views.post_edit, name='post_edit'),
 ]
